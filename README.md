@@ -16,6 +16,8 @@ Are DPWH flood control contracts consistently awarded near their Approved Budget
 
 ## Dataset
 - Source: Kaggle — DPWH Flood Control Projects
+- Original dataset by: bwandowando
+- Link: https://www.kaggle.com/datasets/bwandowando/dpwh-flood-control-projects
 - Raw rows: 9,855
 - Cleaned rows: 9,698
 - Coverage: Completed flood control projects from 2021–2024
