@@ -31,6 +31,26 @@ The raw dataset needed a few fixes before analysis:
 - 157 rows had non-numeric ABC values. After investigating, these turned out to be clustered projects (where multiple projects share one contract budget) and MYCA or Multi-Year Contracting Authority projects. I excluded them from the cost variance analysis but kept them in the dataset for project count and regional breakdowns.
 - Created three new calculated columns: CostVariance, CostVariancePct, and ProjectDurationDays
 
+## Understanding Cost Variance
+
+Cost variance in this project is calculated as:
+
+CostVariance = ContractCost - ApprovedBudgetForContract
+CostVariancePct = (CostVariance / ApprovedBudgetForContract) x 100
+
+A negative value means the contract was awarded below the ABC.
+A positive value means it exceeded the ABC.
+
+However, not all negative variance is good news:
+
+- 0% to -3%: Normal and healthy. ABC is intentionally set conservatively and contractors bid competitively below it. This is expected under RA 9184 (Philippine Procurement Law).
+
+- -3% to -10%: Worth monitoring. Could indicate the ABC was set too high, or the contractor may have underestimated scope — potentially leading to variations and change orders later.
+
+- Below -10%: Red flag. Extreme underbidding at this level raises questions about scope reduction, data accuracy, or procurement compliance. This is the basis for the outlier analysis in this project.
+
+This distinction is important when reading the regional and contractor findings — the goal isn't to find who spent the least, but to identify where variance patterns fall outside of what's considered normal in Philippine public procurement.
+
 ## What I Found
 
 ### The Big Picture
